@@ -1,3 +1,5 @@
+"use strict";
+
 const P = require('bluebird');
 
 module.exports = function withFixtures(fixtures, fn) {
