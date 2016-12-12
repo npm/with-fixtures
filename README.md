@@ -31,6 +31,10 @@ reject.
 
 All of the fixtures will have their `done()` method called.
 
+For compatibility with [`sinon`](http://sinonjs.org), if there is no `done()`
+method on a fixture but there is a `restore()` method, that will be called
+instead.
+
 The promise will resolve to one of the following:
 
 1. The rejection of the lifted function, if it exists

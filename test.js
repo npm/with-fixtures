@@ -43,3 +43,11 @@ tap.test('withfixture ends all its fixtures even if there is an error', t => {
   ], () => {})
     .catch(e => t.equal(e.message, "Boom", "error was propagated"))
 }); 
+
+tap.test('withfixture calls restore to end a fixture if done is not present', t => {
+  t.plan(2);
+  return withFixture([
+    { done: () => { t.pass("ended one") } , restore: () => { t.fail("Called restore instead of done") } },
+    { restore: () => { t.pass("ended two") } }
+  ], () => {})
+}); 
