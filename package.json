@@ -27,6 +27,20 @@
   "dependencies": {
     "bluebird": "^3.4.6"
   },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 8
+    },
+    "rules": {
+      "valid-typeof": "error",
+      "no-undef": "error",
+      "no-unused-vars": "error"
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    }
+  },
   "engines": {
     "node": ">=4"
   }
